@@ -3,7 +3,7 @@ $(document).ready(function() {
 
 	// Slider Event
 
-	$('.banner-slider').slick({
+	$('.main-slider').slick({
 		prevArrow: '<button type="button" class="slick-prev"><svg viewBox="0 0 451.846 451.847"><path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"/></svg></button>',
 		nextArrow: '<button type="button" class="slick-next"><svg viewBox="0 0 451.846 451.847"><path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"/></svg></button>',
 		dots: false,
@@ -188,14 +188,17 @@ $(document).ready(function() {
 	});
 	$(document).on('click', '.js-submenu-close', function() {
 		$('.nav-menu-link').removeClass('active');
-		$('.nav-submenu').hide();
+		$('.nav-submenu').removeClass('open');
 	});
-	$(document).on('mouseover touchend', '.js-nav', function() {
+	$(document).on('click mouseover', '.js-nav', function() {
 		$('.nav-menu-link').removeClass('active');
 		$('.nav-submenu .container').html('');
 		$(this).addClass('active');
 		$(this).parent().find('.nav-submenu-inner').clone().appendTo('.nav-submenu .container');
-		$('.nav-submenu').show();
+		$('.nav-submenu').addClass('open');
+		setTimeout(function() {
+			$('.nav-submenu-inner').addClass('after');
+		}, 100);
 		return false;
 	});
 	$(document).bind('mouseover', function(e) {
@@ -203,7 +206,8 @@ $(document).ready(function() {
 		$('.head-search-form').removeClass('open');
 		if ($(e.target).closest('.nav-menu').length || $(e.target).closest('.nav-submenu-inner').length) return;
 		$('.nav-menu-link').removeClass('active');
-		$('.nav-submenu').hide();
+		$('.nav-submenu').removeClass('open');
+		$('.nav-submenu-inner').removeClass('after');
 		if ($(e.target).closest('.nav > .container').length || $(e.target).closest('.nav-submenu').length || $(e.target).closest('.nav-submenu-close').length) return;
 		$('.nav').removeClass('open');
 	});
