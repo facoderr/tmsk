@@ -8,7 +8,7 @@
 	<meta name="format-detection" content="telephone=no">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>TMSK-SHOP.RU</title>
+	<title>TSMK-SHOP.RU</title>
 	<meta name="description" content="">
 
 	<link rel="icon" type="image/x-icon" href="img/favicon/favicon.ico">
@@ -90,7 +90,7 @@
 					<div class="head-row">
 						<div class="head-phone">
 							<a href="tel:+88000001122" class="head-numb">8 800 000 11 22</a>
-							<a href="#js-popup" class="head-call js-popup">
+							<a href="#js-popup-call" class="head-call js-popup">
 								<span>Перезвоните мне</span>
 								<svg><use xlink:href="#phone"></use></svg>
 							</a>
@@ -1021,7 +1021,7 @@
 					<div class="popular-title">
 						<h2>Популярные ТОВАРЫ</h2>
 					</div>
-					<div class="popular-slider">
+					<div class="item-slider">
 						<div class="slide">
 							<div class="item">
 								<a href="/" class="item-wrap">
@@ -1666,7 +1666,7 @@
 						</a>
 						<div class="foot-phone">
 							<a href="tel:+88000001122" class="foot-numb">8 800 000 11 22</a>
-							<a href="/" class="foot-call">
+							<a href="#js-popup-call" class="foot-call js-popup">
 								Перезвоните мне
 							</a>
 						</div>
@@ -1759,7 +1759,7 @@
 		<div class="popup-form">
 			<form action="/">
 				<div class="input">
-					<input type="tel" name="phone" placeholder="Номер телефона" autocomplete="off" required>
+					<input type="tel" name="phone" placeholder="Номер телефона" autocomplete="off" class="js-validate-phone js-required" required>
 				</div>
 				<label class="checkbox">
 					<input type="checkbox" name="privacy" required>
@@ -1768,7 +1768,7 @@
 						<a href="/">обработку персональных данных</a>
 					</span>
 				</label>
-				<button type="submit" class="btn">
+				<button type="submit" class="btn js-submit">
 					Жду звонка
 				</button>
 			</form>
