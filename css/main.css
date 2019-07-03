@@ -3077,6 +3077,141 @@ img[data-lazy], img[data-src], img[data-srcset] {
   padding: 10px 0 80px;
 }
 
+.faq-row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.faq-tabList {
+  width: 290px;
+}
+
+.faq-tabItem {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #3498db;
+  line-height: 1;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  margin: 0 0 20px;
+}
+
+.faq-tabItem:hover, .faq-tabItem.active {
+  color: #728fa3;
+}
+
+.faq-tabItem:hover svg, .faq-tabItem.active svg {
+  fill: #728fa3;
+}
+
+.faq-tabItem:not(:nth-child(2)) svg {
+  width: 33px;
+  height: 33px;
+}
+
+.faq-tabIcon {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 39px;
+  height: 39px;
+  margin: 0 15px 0 0;
+}
+
+.faq-tabIcon svg {
+  width: 100%;
+  height: 100%;
+  fill: #3498db;
+}
+
+.faq-tabWrap {
+  -webkit-box-flex: 2;
+  -webkit-flex-grow: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  width: 50%;
+}
+
+.faq-tabBlock {
+  display: none;
+}
+
+.faq-tabBlock.open {
+  display: block;
+}
+
+.faq-tabBlock h3, .faq-tabBlock h4 {
+  color: #1c384b;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.faq-tabBlock h3 {
+  font-size: 36px;
+  line-height: 1;
+  margin: 0 0 35px;
+}
+
+.faq-tabBlock h4 {
+  font-size: 16px;
+  margin: 0 0 5px;
+}
+
+.faq-tabBlock h4:not(:first-child) {
+  margin: 45px 0 5px;
+}
+
+.faq-tabBlock p, .faq-tabBlock ul {
+  color: #516e81;
+  font-size: 14px;
+  line-height: 1.4;
+  margin: 0 0 15px;
+}
+
+.faq-tabBlock ul {
+  margin: -5px 0 15px;
+}
+
+.faq-tabBlock ul li {
+  position: relative;
+  padding: 0 0 0 25px;
+}
+
+.faq-tabBlock ul li:not(:last-child) {
+  margin: 0 0 20px;
+}
+
+.faq-tabBlock ul li:after {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  width: 5px;
+  height: 5px;
+  background: #516e81;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+}
+
 /* -- End Faq -- */
 /* -- Blog -- */
 /* -- End Blog -- */
@@ -4763,6 +4898,18 @@ img[data-lazy], img[data-src], img[data-srcset] {
   .success-detail-text {
     width: auto;
   }
+  .faq {
+    padding: 0 0 50px;
+  }
+  .faq-tabBlock h3 {
+    font-size: 32px;
+  }
+  .faq-tabBlock h4:not(:first-child) {
+    margin: 30px 0 5px;
+  }
+  .faq-tabBlock ul li:not(:last-child) {
+    margin: 0 0 15px;
+  }
   .product-img {
     height: 380px;
   }
@@ -4953,6 +5100,24 @@ img[data-lazy], img[data-src], img[data-srcset] {
     width: 40px;
     height: 40px;
     margin: 0 20px 0 0;
+  }
+  .faq-tabList {
+    width: 250px;
+  }
+  .faq-tabItem {
+    font-size: 15px;
+  }
+  .faq-tabItem:not(:nth-child(2)) svg {
+    width: 30px;
+    height: 30px;
+  }
+  .faq-tabIcon {
+    width: 35px;
+    height: 35px;
+  }
+  .faq-tabBlock h3 {
+    font-size: 30px;
+    margin: 0 0 30px;
   }
   .information {
     padding: 0 0 20px;
@@ -5149,6 +5314,21 @@ img[data-lazy], img[data-src], img[data-srcset] {
   }
   .success-detail-row {
     padding: 0;
+  }
+  .faq-row {
+    -webkit-flex-flow: wrap;
+        -ms-flex-flow: wrap;
+            flex-flow: wrap;
+  }
+  .faq-tabList {
+    width: 100%;
+  }
+  .faq-tabWrap {
+    width: 100%;
+    margin: 30px 0 0;
+  }
+  .faq-tabBlock h3 {
+    font-size: 28px;
   }
   .information-title {
     margin: 0 0 15px;
@@ -5441,6 +5621,45 @@ img[data-lazy], img[data-src], img[data-srcset] {
     width: 35px;
     height: 35px;
     margin: 0 15px 0 0;
+  }
+  .faq {
+    padding: 0 0 40px;
+  }
+  .faq-row {
+    -webkit-flex-flow: wrap;
+        -ms-flex-flow: wrap;
+            flex-flow: wrap;
+  }
+  .faq-tabItem {
+    font-size: 14px;
+  }
+  .faq-tabItem:not(:nth-child(2)) svg {
+    width: 27px;
+    height: 27px;
+  }
+  .faq-tabIcon {
+    width: 32px;
+    height: 32px;
+  }
+  .faq-tabWrap {
+    margin: 20px 0 0;
+  }
+  .faq-tabBlock h3 {
+    font-size: 25px;
+    margin: 0 0 20px;
+  }
+  .faq-tabBlock h4 {
+    font-size: 14px;
+  }
+  .faq-tabBlock h4:not(:first-child) {
+    margin: 20px 0 5px;
+  }
+  .faq-tabBlock p, .faq-tabBlock ul {
+    font-size: 12px;
+    margin: 0 0 10px;
+  }
+  .faq-tabBlock ul li:not(:last-child) {
+    margin: 0 0 10px;
   }
   .information-title span:after {
     right: -140px;
