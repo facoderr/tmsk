@@ -3430,7 +3430,148 @@ img[data-lazy], img[data-src], img[data-srcset] {
 
 /* -- End Information -- */
 /* -- Contacts -- */
+.contacts {
+  position: relative;
+  padding: 10px 0 80px;
+}
+
+.contacts-title {
+  margin: 0 0 40px;
+}
+
+.contacts-row {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contacts-row:after {
+  content: '';
+  position: absolute;
+  bottom: -103px;
+  left: 0;
+  width: 72px;
+  height: 57px;
+  background: url("../img/icons/notebook.svg") no-repeat center;
+  background-size: 100%;
+  z-index: 2;
+}
+
+.contacts-info {
+  width: 42.5%;
+}
+
+.contacts-phone {
+  margin: 0 0 30px;
+}
+
+.contacts-phone a {
+  display: block;
+  color: #1c384b;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0 0 3px;
+}
+
+.contacts-phone p {
+  color: #516e81;
+  font-size: 15px;
+  line-height: 1.33;
+}
+
+.contacts-address:not(:last-child) {
+  margin: 0 0 30px;
+}
+
+.contacts-address-label {
+  color: #1c384b;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0 0 7px;
+}
+
+.contacts-address a {
+  display: inline-block;
+  color: #516e81;
+  margin: 0 0 0 10px;
+}
+
+.contacts-address p {
+  color: #516e81;
+  font-size: 15px;
+  line-height: 1.33;
+}
+
+.contacts-address p:not(:last-child) {
+  margin: 0 0 7px;
+}
+
+.contacts-map {
+  width: 57.5%;
+  height: 324px;
+}
+
+.contacts-map #map {
+  width: 100%;
+  height: 100%;
+}
+
 /* -- End Contacts -- */
+/* -- Callback -- */
+.callback {
+  position: relative;
+  background: #edf4f9;
+  padding: 70px 0 60px;
+}
+
+.callback-title {
+  color: #1c384b;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  margin: 0 0 25px;
+}
+
+.callback-form-row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.callback-form .input {
+  width: 240px;
+  height: 42px;
+  margin: 0 35px 28px 0;
+}
+
+.callback-form .textarea {
+  width: 64%;
+  height: 125px;
+  margin: 0 0 20px;
+}
+
+.callback-form .btn {
+  width: 160px;
+  height: 40px;
+  font-size: 16px;
+  margin: 15px 0 0;
+}
+
+/* -- End Callback -- */
 /* -- Product -- */
 .product {
   padding: 20px 0 90px;
@@ -4802,6 +4943,10 @@ img[data-lazy], img[data-src], img[data-srcset] {
     font-size: 14px;
     padding: 0 15px;
   }
+  .textarea textarea {
+    font-size: 14px;
+    padding: 15px;
+  }
   .head-row {
     padding: 0;
   }
@@ -5096,6 +5241,43 @@ img[data-lazy], img[data-src], img[data-srcset] {
     width: -webkit-calc((100% / 3) - 15px);
     width: calc((100% / 3) - 15px);
   }
+  .contacts {
+    padding: 0 0 50px;
+  }
+  .contacts-title {
+    margin: 0 0 35px;
+  }
+  .contacts-row {
+    -webkit-flex-flow: wrap;
+        -ms-flex-flow: wrap;
+            flex-flow: wrap;
+  }
+  .contacts-row:after {
+    bottom: -75px;
+  }
+  .contacts-info {
+    width: 100%;
+    margin: 0 0 40px;
+  }
+  .contacts-phone {
+    margin: 0 0 20px;
+  }
+  .contacts-phone a {
+    font-size: 24px;
+  }
+  .contacts-address:not(:last-child) {
+    margin: 0 0 20px;
+  }
+  .contacts-map {
+    width: 100%;
+    height: 320px;
+  }
+  .callback {
+    padding: 50px 0;
+  }
+  .callback-title {
+    font-size: 24px;
+  }
   .product-img {
     height: 380px;
   }
@@ -5324,6 +5506,9 @@ img[data-lazy], img[data-src], img[data-srcset] {
   }
   .information {
     padding: 0 0 20px;
+  }
+  .callback-form .textarea {
+    width: 100%;
   }
   .product {
     padding: 0 0 50px;
@@ -5890,6 +6075,43 @@ img[data-lazy], img[data-src], img[data-srcset] {
   .information-title span:after {
     right: -140px;
     width: 120px;
+  }
+  .contacts-title {
+    margin: 0 0 30px;
+  }
+  .contacts-phone a {
+    font-size: 18px;
+  }
+  .contacts-phone p {
+    font-size: 14px;
+  }
+  .contacts-address-label {
+    font-size: 16px;
+  }
+  .contacts-address a {
+    display: block;
+    margin: 0;
+  }
+  .contacts-address p {
+    font-size: 14px;
+  }
+  .contacts-map {
+    height: 280px;
+  }
+  .callback {
+    padding: 50px 0 40px;
+  }
+  .callback-title {
+    font-size: 18px;
+  }
+  .callback-form-row {
+    -webkit-flex-flow: wrap;
+        -ms-flex-flow: wrap;
+            flex-flow: wrap;
+  }
+  .callback-form .input {
+    width: 100%;
+    margin: 0 0 15px;
   }
   .product-title {
     font-size: 18px;
