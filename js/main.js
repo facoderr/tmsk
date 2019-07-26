@@ -526,6 +526,18 @@ $(document).ready(function() {
 
 	//
 
+	// Scroll Event
+
+	$(window).bind('scroll', function() {
+		if ($(document).scrollTop() >= 300) {
+			$('.head-mobile').addClass('active');
+		} else {
+			$('.head-mobile').removeClass('active');
+		}
+	});
+
+	//
+
 	// Load Event
 
 	$(window).on('load', function() {
